@@ -10,13 +10,13 @@ A Python script to fetch pnr status. An attempt to bypass captcha on http://www.
 
 ```sh
 usage --
-python pnr_status.py <PNR no.>
+python fetch_pnr_status.py <PNR no.>
 ```
 
 # Example
 
 ```sh
-$python pnr_status.py 4416052206
+$python fetch_pnr_status.py 4416052206
 ```
 ```sh
 [u'*12735', u'YPR GARIB RATH', u'21- 1-2016', u'SC', u'YPR', u'YPR', u'SC', u'3A', u'Passenger 1', u'G12 , 73,SS', u'CNF', u'CHART NOT PREPARED']
