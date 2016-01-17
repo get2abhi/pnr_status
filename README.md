@@ -11,7 +11,7 @@ A Python script to fetch pnr status. An attempt to bypass captcha on http://www.
 ```sh
 usage --
 python pnr_status.py <PNR no.>
-'''
+```
 
 # Example
 
