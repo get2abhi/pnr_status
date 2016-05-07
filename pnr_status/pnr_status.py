@@ -28,7 +28,7 @@ class pnr_status():
     }
     data = 'lccp_pnrno1='+pnr+'&lccp_cap_value=24357&lccp_capinp_value=24357'
 
-    result = requests.post('http://www.indianrail.gov.in/cgi_bin/inet_pnstat_cgi_2484.cgi', headers=headers, cookies=cookies, data=data)
+    result = requests.post('http://www.indianrail.gov.in/cgi_bin/inet_pnstat_cgi_22942.cgi', headers=headers, cookies=cookies, data=data, timeout = 300)
     html = result.text
     return self.parse_response(html)
   
