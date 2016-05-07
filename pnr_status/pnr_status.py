@@ -27,8 +27,10 @@ class pnr_status():
     'Connection': 'keep-alive',
     }
     data = 'lccp_pnrno1='+pnr+'&lccp_cap_value=24357&lccp_capinp_value=24357'
-
-    result = requests.post('http://www.indianrail.gov.in/cgi_bin/inet_pnstat_cgi_22942.cgi', headers=headers, cookies=cookies, data=data, timeout = 300)
+    page = requests.get('http://www.indianrail.gov.in/pnr_Enq.html', timeout = 300)
+    soup1 = BeautifulSoup(page.text)
+    action = soup1.find('form', id='form3').get('action')
+    result = requests.post(action, headers=headers, cookies=cookies, data=data, timeout = 300)
     html = result.text
     return self.parse_response(html)
   
